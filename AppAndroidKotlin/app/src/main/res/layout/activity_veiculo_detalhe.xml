@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.adrianogba.crud_kotlin.VeiculoDetalheActivity">
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#FAFAFA"
+            android:text="@string/app_name" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/bar"
+        android:id="@+id/scrollViewVeiculoDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lnbuttons">
+
+        <RelativeLayout
+            android:id="@+id/VeiculoDetalheContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlMarca"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Marca:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtmarca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="marca"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@id/rlMarca"
+                android:id="@+id/rlModelo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Modelo:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtmodelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="modelo"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlCor"
+                android:layout_below="@id/rlModelo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Cor:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtcor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="cor"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlAno"
+                android:layout_below="@id/rlCor"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Ano:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="ano"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlPreco"
+                android:layout_below="@id/rlAno"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Preço:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtpreco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="preco"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlDescricao"
+                android:layout_below="@id/rlPreco"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:text="Descrição:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtdescricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="descricao"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="textEnd"
+                    android:layout_toEndOf="@id/textView7"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlEhnovo"
+                android:layout_below="@id/rlDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Estado do veículo:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtehnovo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="ehnovo"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlDt_cadastro"
+                android:layout_below="@id/rlEhnovo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Data de Cadastro:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtdt_cadastro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="dt_cadastro"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlDt_atualizacao"
+                android:layout_below="@id/rlDt_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Data de Atualização:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtdt_atualizacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="dt_atualizacao"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/lnbuttons"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/btnvoltar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center"
+                android:textColor="#FAFAFA"
+                android:textSize="18sp"
+                android:text="Voltar"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/btneditar"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center"
+                android:textColor="#FAFAFA"
+                android:textSize="18sp"
+                android:text="Editar"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/btnremover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center"
+                android:textColor="#FAFAFA"
+                android:textSize="18sp"
+                android:text="Remover"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="#FAFAFA">
+        <RelativeLayout
+        android:orientation="vertical"
+            android:layout_margin="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="?android:selectableItemBackground">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_keyboard_arrow_right_black_48px"
+            android:id="@+id/imageView2"
+            android:layout_marginEnd="10dp"
+            android:tint="#ACACAC"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textModelo"
+            android:layout_gravity="start"
+            android:textSize="16sp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="#8f8f94"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageView2" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

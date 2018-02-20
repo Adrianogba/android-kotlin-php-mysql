@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.adrianogba.crud_kotlin.AddVeiculo">
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#FAFAFA"
+            android:text="@string/app_name" />
+
+        <RelativeLayout
+            android:id="@+id/btncadastrar"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="?android:selectableItemBackground"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_done_black_48px"
+                android:tint="#FAFAFA"
+                android:layout_margin="10dp"
+                />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/VeiculoDetalheContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlMarca"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Marca:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:maxLength="40"
+                    android:id="@+id/etmarca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/textView"
+                    android:gravity="center|end"
+                    android:textSize="16dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@id/rlMarca"
+                android:id="@+id/rlModelo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:text="Modelo:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:maxLength="50"
+                    android:id="@+id/etmodelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/textView2"
+                    android:gravity="center|end"
+                    android:textSize="16dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlCor"
+                android:layout_below="@id/rlModelo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:text="Cor:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:id="@+id/etcor"
+                    android:maxLength="30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/textView3"
+                    android:gravity="center|end"
+                    android:textSize="16dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlAno"
+                android:layout_below="@id/rlCor"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:text="Ano:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:maxLength="4"
+                    android:id="@+id/etano"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/textView4"
+                    android:gravity="center|end"
+                    android:textSize="16dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlPreco"
+                android:layout_below="@id/rlAno"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:text="Preço:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:maxLength="50"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:id="@+id/etpreco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/textView5"
+                    android:gravity="center|end"
+                    android:textSize="16dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlDescricao"
+                android:layout_below="@id/rlPreco"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:text="Descrição:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:maxLength="150"
+                    android:id="@+id/etdescricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/textView6"
+                    android:gravity="center|end"
+                    android:textSize="16dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlEhnovo"
+                android:layout_below="@id/rlDescricao"
+                android:layout_width="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:layout_height="65dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Estado do veículo:"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/txtehnovo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Selecionar"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ACACAC" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

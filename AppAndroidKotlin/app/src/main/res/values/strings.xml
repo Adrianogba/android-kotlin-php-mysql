@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CRUD-Kotlin</string>
+    <string name="webservice">http://192.168.1.1/WebServicePHP/</string>
+</resources>
