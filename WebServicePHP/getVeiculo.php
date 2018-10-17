@@ -1,6 +1,6 @@
 <?php 
 
-	if($_SERVER['REQUEST_METHOD']=='POST' and $_SERVER['HTTP_PATH']=='getVeiculoDetalhe'){
+	if ($_SERVER['REQUEST_METHOD']=='POST' and $_SERVER['HTTP_PATH']=='getVeiculoDetalhe') {
 
 		//Getting the requested id
 	$id =  $_SERVER['HTTP_ID'];
@@ -37,6 +37,6 @@
 	
 	mysqli_close($con);
 
-	}else{
+	} else {
 		echo "Acesso não autorizado.";
 	}
