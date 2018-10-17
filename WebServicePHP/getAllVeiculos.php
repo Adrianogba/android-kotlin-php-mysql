@@ -1,7 +1,7 @@
 <?php 
 	//echo ($_SERVER['HTTP_ID']);
 
-	if($_SERVER['REQUEST_METHOD']=='POST' and $_SERVER['HTTP_PATH']=='getVeiculos'){
+	if ($_SERVER['REQUEST_METHOD']=='POST' and $_SERVER['HTTP_PATH']=='getVeiculos') {
 
 		//Importing Database Script 
 		require_once('dbConnect.php');
@@ -16,7 +16,7 @@
 		$result = array();
 		
 		//looping through all the records fetched
-		while($row = mysqli_fetch_array($r)){
+		while ($row = mysqli_fetch_array($r)) {
 			
 			//Pushing name and id in the blank array created 
 			array_push($result,array(
@@ -31,7 +31,7 @@
 		
 		mysqli_close($con);
 
-	}else{
+	} else {
 		echo "Acesso não autorizado.";
 		echo date('Y-m-d H:i:s');
 	}
