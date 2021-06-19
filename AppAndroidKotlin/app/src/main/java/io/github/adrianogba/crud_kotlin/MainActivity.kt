@@ -2,7 +2,7 @@ package io.github.adrianogba.crud_kotlin
 
 import android.app.ProgressDialog
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.widget.Toast
@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
 
         swipeRefresh.setOnRefreshListener { carregarLista() }
 
-        btnAddVeiculo.setOnClickListener({ v ->
+        btnAddVeiculo.setOnClickListener { v ->
             val i = Intent(v.context, AddVeiculo::class.java)
             v.context.startActivity(i)
-        })
+        }
 
         progressDialog = ProgressDialog(this@MainActivity)
         progressDialog.setMessage("Carregando...")

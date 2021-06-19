@@ -4,8 +4,8 @@ import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.EditText
 import android.widget.RelativeLayout
@@ -64,7 +64,7 @@ class AddVeiculo : AppCompatActivity() {
         }
 
         btncadastrar.setOnClickListener {
-            if (testForm()!!) {
+            if (testForm()) {
 
                 progressDialog = ProgressDialog(this@AddVeiculo)
                 progressDialog.setMessage("Carregando...")
@@ -139,10 +139,10 @@ class AddVeiculo : AppCompatActivity() {
                 etpreco.setText(bundle!!.getString("preco"), TextView.BufferType.EDITABLE)
                 etdescricao.setText(bundle!!.getString("descricao"), TextView.BufferType.EDITABLE)
 
-                id = bundle!!.getString("id")
-                dt_cadastro = bundle!!.getString("dt_cadastro")
+                id = bundle!!.getString("id").toString()
+                dt_cadastro = bundle!!.getString("dt_cadastro").toString()
 
-                ehnovo = bundle!!.getString("ehnovo")
+                ehnovo = bundle!!.getString("ehnovo").toString()
                 if (ehnovo === "1") {
                     txtehnovo.text = "Novo"
 
@@ -156,7 +156,7 @@ class AddVeiculo : AppCompatActivity() {
 
     }
 
-    fun testForm(): Boolean? {
+    private fun testForm(): Boolean {
         if (etmarca.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
                 || etmodelo.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
                 || etcor.text.toString().trim { it <= ' ' }.equals("", ignoreCase = true)
